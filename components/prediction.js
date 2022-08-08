@@ -4,7 +4,7 @@ function Prediction({ price, pourcentage }) {
   return (
       <View style={styles.prediction}>
         <View style={styles.left}>
-          <Text style={styles.title}>prediction</Text>
+          <Text style={styles.title}>Next prediction</Text>
           <Text style={styles.price}>{price}</Text>
           <Text style={styles.pourcentage}>{pourcentage}</Text>
         </View>
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     alignContent: 'center'
   },
   title: {
-    fontFamily: 'Inter',
+    fontFamily: 'Inter_light',
     color: '#7999B3',
     fontSize: 18,
     fontWeight: '300'
