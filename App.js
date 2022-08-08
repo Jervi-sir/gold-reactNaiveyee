@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, ScrollView } from 'react-native';
 import Prediction from './components/prediction'
 import OldPrice from './components/oldPrice'
+import Header from './components/header'
 import { useFonts } from 'expo-font';
 
 export default function App() {
@@ -41,6 +42,7 @@ export default function App() {
   
   return (
     <SafeAreaView style={styles.container}>
+      <Header />
       <Prediction price={'$10,000.00'} pourcentage={'3%'} />
       <ScrollView>
         {oldPrices}
@@ -56,5 +58,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5F7FB',
     margin: 20,
   },
+  Header: {
+    opacity:0,
+  }
 
 });
