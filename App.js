@@ -1,9 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
+import { useFonts } from 'expo-font';
 import { SafeAreaView, StyleSheet, ScrollView, View } from 'react-native';
 import Prediction from './components/prediction'
-import OldPrice from './components/oldPrice'
+import  OldPrice from './components/oldPrice'
 import Header from './components/header'
-import { useFonts } from 'expo-font';
+import Chart from './components/chart'
 
 export default function App() {
   const [loaded] = useFonts({
@@ -44,6 +45,7 @@ export default function App() {
     <View style={styles.container}>
       <Header />
       <Prediction price={'$10,000.00'} pourcentage={'3%'} />
+      <Chart />
       <ScrollView>
         {oldPrices}
       </ScrollView>
